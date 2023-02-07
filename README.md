@@ -1,3 +1,5 @@
+example of how certain C++ tools could be used
+
 ### required tools
  - clang with extra tools
    - tested with clang-*-15
@@ -12,7 +14,7 @@ bash clean-build.sh
 bash clean-build.sh Release
 ```
 
-### rebuild and test Debug
+### rebuild, analyze, and test Debug
 ```
 bash build-Debug.sh
 ```
