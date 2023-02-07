@@ -1,0 +1,5 @@
+Checks: '-*,bugprone-*,cppcoreguidelines-*,-cppcoreguidelines-pro-bounds-array-to-pointer-decay,-cppcoreguidelines-macro-usage,-cppcoreguidelines-pro-type-reinterpret-cast,-cppcoreguidelines-pro-type-union-access,-cppcoreguidelines-pro-bounds-pointer-arithmetic,-cppcoreguidelines-pro-type-vararg,google-build-using-namespace,google-explicit-constructor,google-global-names-in-headers,google-readability-casting,google-runtime-int,google-runtime-operator,hicpp-*,-hicpp-vararg,-hicpp-no-array-decay,misc-*,modernize-*,performance-*,readability-*,-readability-named-parameter'
+WarningsAsErrors: ''
+HeaderFilterRegex: .
+AnalyzeTemporaryDtors: false
+FormatStyle: file
