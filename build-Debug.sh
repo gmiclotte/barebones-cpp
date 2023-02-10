@@ -17,6 +17,9 @@ cd  ${build} || exit
     cp ./compile_commands.json ../analysis/
 cd .. || exit
 
+# replace -I with -isystem, to avoid checking library code
+sed -i "s#-I\(/[^ ]*/.conan/\)#-isystem \1#g" "${analysis}"/compile_commands.json
+
 # aggressively run clang-tidy on src/*.*
 python scripts/run-clang-tidy.py -p="${analysis}" -fix > "${analysis}"/clang-tidy.log
 clang-tidy-html "${analysis}"/clang-tidy.log -o "${analysis}"/clang-tidy.html

@@ -22,8 +22,6 @@ cd ${build} || exit
         -DCONAN_BUILD_INFO_FILE=${build}/conanbuildinfo.cmake \
         -DCMAKE_BUILD_TYPE=${build_type} \
         -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
-    # replace -I with -isystem, to avoid checking library code
-    sed -i "s#-I\(/[^ ]*/.conan/\)#-isystem \1#g" compile_commands.json
     # build
     cmake --build .
 cd ..
